@@ -7,7 +7,7 @@
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Document</title>
+                <title>Table User</title>
                 <!-- Latest compiled and minified CSS -->
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -22,30 +22,30 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h2>Create User</h2>
-                        <form action="/admin/user/create1" method="post">
+                        <form:form action="/admin/user/create" method="post" modelAttribute="newUser">
                             <div class="mb-3">
                                 <label class="form-label">Email address</label>
-                                <input type="email" class="form-control" required>
+                                <form:input path="email" type="email" class="form-control" />
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Password</label>
-                                <input type="password" class="form-control" required>
+                                <form:input path="password" type="password" class="form-control" />
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Phone Number:</label>
-                                <input type="tel" name="phone" class="form-control" placeholder="e.g., 0901234567"
-                                    required>
+                                <form:input path="phone" type="text" class="form-control"
+                                    placeholder="e.g., 0901234567" />
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Full Name:</label>
-                                <input type="text" name="fullName" class="form-control" required>
+                                <form:input path="fullName" type="text" class="form-control" />
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Address:</label>
-                                <input type="text" name="address" class="form-control" required>
+                                <form:input path="address" type="text" class="form-control" />
                             </div>
                             <button type="submit" class="btn btn-primary">Create</button>
-                        </form>
+                        </form:form>
                     </div>
                 </div>
 
